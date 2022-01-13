@@ -23,17 +23,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="生而为人，我唯有学习">
+  <meta name="description" content="fancyBoxjQuery lightbox script for displaying images, videos and more.Touch enabled, responsive and fully customizable. See the project page for documentation and a demonstration. Follow @thefancyapps">
 <meta property="og:type" content="website">
 <meta property="og:title" content="阿为的小屋">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/lib/fancybox/README.html">
 <meta property="og:site_name" content="阿为的小屋">
-<meta property="og:description" content="生而为人，我唯有学习">
+<meta property="og:description" content="fancyBoxjQuery lightbox script for displaying images, videos and more.Touch enabled, responsive and fully customizable. See the project page for documentation and a demonstration. Follow @thefancyapps">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-13T05:47:01.686Z">
+<meta property="article:modified_time" content="2022-01-13T05:47:01.686Z">
 <meta property="article:author" content="阿为">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/lib/fancybox/README">
 
 
 <script id="page-configurations">
@@ -46,7 +48,8 @@
   };
 </script>
 
-  <title>归档 | 阿为的小屋</title>
+  <title> | 阿为的小屋
+</title>
   
 
 
@@ -159,77 +162,90 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content archive">
+          <div class="content page posts-expand">
             
 
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
-      </div>
+  <ul class="breadcrumb">
+          
+            <li><a href="/lib/">LIB</a></li>
+            <li><a href="/lib/fancybox/">FANCYBOX</a></li>
+            <li>README</li>
+          
+  </ul>
+
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+      
+      
+      <div class="post-body">
+          <h1 id="fancyBox"><a href="#fancyBox" class="headerlink" title="fancyBox"></a>fancyBox</h1><p>jQuery lightbox script for displaying images, videos and more.<br>Touch enabled, responsive and fully customizable.</p>
+<p>See the <a target="_blank" rel="noopener" href="http://fancyapps.com/fancybox/3/">project page</a> for documentation and a demonstration.</p>
+<p>Follow <a target="_blank" rel="noopener" href="//twitter.com/thefancyapps">@thefancyapps</a> for updates.</p>
+<h2 id="Quick-start"><a href="#Quick-start" class="headerlink" title="Quick start"></a>Quick start</h2><p>1.  Add latest jQuery and fancyBox files</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span>  <span class="attr">href</span>=<span class="string">&quot;/path/to/jquery.fancybox.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/path/to/jquery.fancybox.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>2.  Create links</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-fancybox</span>=<span class="string">&quot;gallery&quot;</span> <span class="attr">href</span>=<span class="string">&quot;big_1.jpg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;small_1.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-fancybox</span>=<span class="string">&quot;gallery&quot;</span> <span class="attr">href</span>=<span class="string">&quot;big_2.jpg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;small_2.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>3. Enjoy!</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>fancyBox is licensed under the <a target="_blank" rel="noopener" href="http://choosealicense.com/licenses/gpl-3.0">GPLv3</a> license for all open source applications.<br>A commercial license is required for all commercial applications (including sites, themes and apps you plan to sell).</p>
+<p><a target="_blank" rel="noopener" href="http://fancyapps.com/fancybox/3/#license">Read more about fancyBox license</a>.</p>
+<h2 id="Bugs-and-feature-requests"><a href="#Bugs-and-feature-requests" class="headerlink" title="Bugs and feature requests"></a>Bugs and feature requests</h2><p>If you find a bug, please report it <a target="_blank" rel="noopener" href="https://github.com/fancyapps/fancybox/issues">here on Github</a>.</p>
+<p>Guidelines for bug reports:</p>
+<ol>
+<li>Use the GitHub issue search — check if the issue has already been reported.</li>
+<li>Check if the issue has been fixed — try to reproduce it using the latest master or development branch in the repository.</li>
+<li>Isolate the problem — create a reduced test case and a live example. You can use CodePen to fork any demo found on documentation to use it as a template.</li>
+</ol>
+<p>A good bug report shouldn’t leave others needing to chase you up for more information.<br>Please try to be as detailed as possible in your report.</p>
+<p>Feature requests are welcome. Please look for existing ones and use GitHub’s “reactions” feature to vote.</p>
+<p>Please do not use the issue tracker for personal support requests - use Stack Overflow (<a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/tagged/fancybox-3">fancybox-3</a> tag) instead.</p>
+
+      </div>
+      
+      
+      
     </div>
+    
+  <ul class="breadcrumb">
+          
+            <li><a href="/lib/">LIB</a></li>
+            <li><a href="/lib/fancybox/">FANCYBOX</a></li>
+            <li>README</li>
+          
+  </ul>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-01-12T22:25:28+08:00"
-              content="2022-01-12">
-          01-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" itemprop="url">
-            <span itemprop="name">我的第一篇文章</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-01-12T11:15:05+08:00"
-              content="2022-01-12">
-          01-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/12/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
-    </div>
-  </div>
-  
-  
-  
-
-  
-
+    
+    
+    
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81NTIwMy8zMTY3MA=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -276,6 +292,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fancyBox"><span class="nav-number">1.</span> <span class="nav-text">fancyBox</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-start"><span class="nav-number">1.1.</span> <span class="nav-text">Quick start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#License"><span class="nav-number">1.2.</span> <span class="nav-text">License</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bugs-and-feature-requests"><span class="nav-number">1.3.</span> <span class="nav-text">Bugs and feature requests</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -457,6 +474,21 @@ $(document).ready(function() {
 
   
 
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 </body>
 </html>
